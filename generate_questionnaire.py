@@ -517,7 +517,10 @@ def build():
         p.add_run(letters + "  -  " + " / ".join(opts[j] for j in sorted(correct)))
         p.paragraph_format.space_after = Pt(4)
 
-    out = "Questionnaire_GTS_DICOM_HL7.docx"
+    import os
+    out_dir = "Cr"
+    os.makedirs(out_dir, exist_ok=True)
+    out = os.path.join(out_dir, "Questionnaire_GTS_DICOM_HL7_Cr.docx")
     doc.save(out)
     # Sanity checks
     assert all(len(o) == 8 for _, o, _ in DICOM_MCQS + HL7_MCQS), "8 choix requis"

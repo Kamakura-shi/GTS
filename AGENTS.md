@@ -6,7 +6,9 @@ Ce dépôt regroupe des données et du matériel de cours pour le programme GTS.
   plateforme de force (posturographie) : colonnes `Fx, Fy, Fz, Mx, My, Mz`,
   échantillonnés à 1000 Hz, essais yeux fermés / yeux ouverts.
 - `generate_questionnaire.py` génère un questionnaire au format `.docx`
-  (`Questionnaire_GTS_DICOM_HL7.docx`) portant sur les standards DICOM et HL7v2.
+  (`Cr/Questionnaire_GTS_DICOM_HL7_Cr.docx`) portant sur les standards DICOM et
+  HL7v2. Le suffixe `_Cr` et le dossier `Cr/` identifient les livrables produits
+  par l'agent.
 
 ## Cursor Cloud specific instructions
 
@@ -19,7 +21,7 @@ Ce dépôt regroupe des données et du matériel de cours pour le programme GTS.
   `shuffle_mcqs`). Modifier la graine change l'ordre des réponses et donc les
   lettres du corrigé, mais pas les bonnes réponses.
 - Prévisualiser en PDF/PNG (utile pour vérifier le rendu) :
-  `soffice --headless --convert-to pdf --outdir /tmp Questionnaire_GTS_DICOM_HL7.docx`
-  puis `pdftoppm -png -r 110 /tmp/Questionnaire_GTS_DICOM_HL7.pdf page`.
+  `soffice --headless --convert-to pdf --outdir /tmp Cr/Questionnaire_GTS_DICOM_HL7_Cr.docx`
+  puis `pdftoppm -png -r 110 /tmp/Questionnaire_GTS_DICOM_HL7_Cr.pdf page`.
   `libreoffice-writer` et `poppler-utils` ne sont pas garantis préinstallés ;
   les installer via apt si besoin (hors update script).
