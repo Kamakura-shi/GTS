@@ -518,7 +518,8 @@ def build():
         p.paragraph_format.space_after = Pt(4)
 
     import os
-    out_dir = "Cr"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    out_dir = os.path.join(script_dir, "intra", "Cr")
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, "Questionnaire_GTS_DICOM_HL7_Cr.docx")
     doc.save(out)
